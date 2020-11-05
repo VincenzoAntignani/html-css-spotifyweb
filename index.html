@@ -3,10 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/12-bool.css">
     <link rel="stylesheet" href="css/style.css">
     <title>My Spotify Web</title>
   </head>
@@ -14,19 +15,148 @@
     <div class="wrapper">
       <!-- Main -->
       <main>
-        <div class="main_nav">
+        <!-- Sezione Aside di sx -->
+        <div class="aside_container">
+          <div class="aside_top">
+            <!-- Sezione logo -->
+            <div class="logo_spotify">
+              <img src="https://pianopacil.com/wp-content/uploads/2019/12/spotify-branco-1-1.png" alt="logo spotify">
+            </div>
+            <div class="icon_spotify">
+              <i class="fab fa-spotify"></i>
+            </div>
+            <!-- /Sezione logo -->
 
-        </div>
+            <!-- Navigazione aside -->
+            <div class="aside_nav">
+              <ul class="no_style_list">
+                <li><a href=""><i class="fas fa-home"></i><span class="hidden_xs">Home</span></a></li>
+                <li><a href=""><i class="fas fa-search"></i><span class="hidden_xs">Cerca</span></a></li>
+                <li><a href=""><i class="fab fa-slack-hash"></i><span class="hidden_xs">La tua libreria</span></a></li>
+              </ul>
+            </div>
+            <!-- /Navigazione aside -->
 
-        <div class="main_content">
-          <div class="cta_container">
+            <!-- Playlist -->
+            <div class="nav_playlist hidden_xs">
+              <h4>playlist</h4>
+              <span id="new_playlist"><i class="fas fa-plus-square"></i>New playlist</span>
+            </div>
+            <div class="name_playlist hidden_xs">
+              <ul class="no_style_list">
+                <li><a href="#">Nome playlist</a></li>
+                <li><a href="#">Nome playlist</a></li>
+                <li><a href="#">Nome playlist</a></li>
+                <li><a href="#">Nome playlist</a></li>
+                <li><a href="#">Nome playlist</a></li>
+                <li><a href="#">Nome playlist</a></li>
+                <li><a href="#">Nome playlist</a></li>
+              </ul>
+            </div>
+            <!-- /Playlist -->
+          </div>
 
+          <!-- Parte inferiore aside -->
+          <div class="aside_bottom">
+            <div class="install_app">
+              <a href="#"><i class="fas fa-arrow-circle-down"></i>
+              <span class="hidden_xs">Install app</span></a>
+            </div>
+            <div class="your_profile">
+              <i class="fas fa-user-circle"></i>
+              <span class="hidden_xs">John Doe</span>
+            </div>
           </div>
         </div>
-      </main>
-      <!-- /Main -->
+        <!-- /Sezione Aside di sx -->
 
-      <!-- footer -->
+        <!-- Contenuto del main -->
+        <div class="main_content">
+          <!-- Call to action -->
+          <div class="cta_container">
+            <div class="call_to_act">
+              effettua l'upgrade
+            </div>
+          </div>
+          <!-- /Call to action -->
+
+          <!-- Contenuto centrale -->
+          <div class="nav_menu">
+            <ul class="no_style_list">
+              <li><a href="#">in evidenza</a></li>
+              <li><a href="#">podcast</a></li>
+              <li><a href="#">classifiche</a></li>
+              <li><a href="#">generi e mood</a></li>
+              <li><a href="#">nuove uscite</a></li>
+              <li><a href="#">scopri</a></li>
+            </ul>
+          </div>
+
+          <h3>Recently played</h3>
+          <div class="cover_container">
+            <figure>
+              <div class="cover_img">
+                <img src="https://i.pinimg.com/originals/c7/5f/1e/c75f1ebd545adaa7e3622a010c388e35.jpg" alt="">
+                <i class="far fa-play-circle"></i>
+              </div>
+              <h4>Heavy Metal</h4>
+              <figcaption>Subtitle</figcaption>
+            </figure>
+
+            <figure>
+              <div class="cover_img">
+                <img src="https://i.pinimg.com/originals/c7/5f/1e/c75f1ebd545adaa7e3622a010c388e35.jpg" alt="">
+                <i class="far fa-play-circle"></i>
+              </div>
+              <h4>Heavy Metal</h4>
+              <figcaption>Subtitle</figcaption>
+            </figure>
+
+            <figure>
+              <div class="cover_img">
+                <img src="https://i.pinimg.com/originals/c7/5f/1e/c75f1ebd545adaa7e3622a010c388e35.jpg" alt="">
+                <i class="far fa-play-circle"></i>
+              </div>
+              <h4>Heavy Metal</h4>
+              <figcaption>Subtitle</figcaption>
+            </figure>
+
+            <figure>
+              <div class="cover_img">
+                <img src="https://i.pinimg.com/originals/c7/5f/1e/c75f1ebd545adaa7e3622a010c388e35.jpg" alt="">
+                <i class="far fa-play-circle"></i>
+              </div>
+              <h4>Heavy Metal</h4>
+              <figcaption>Subtitle</figcaption>
+            </figure>
+
+            <figure>
+              <div class="cover_img">
+                <img src="https://i.pinimg.com/originals/c7/5f/1e/c75f1ebd545adaa7e3622a010c388e35.jpg" alt="">
+                <i class="far fa-play-circle"></i>
+              </div>
+              <h4>Heavy Metal</h4>
+              <figcaption>Subtitle</figcaption>
+            </figure>
+
+            <figure>
+              <div class="cover_img">
+                <img src="https://i.pinimg.com/originals/c7/5f/1e/c75f1ebd545adaa7e3622a010c388e35.jpg" alt="">
+                <i class="far fa-play-circle"></i>
+              </div>
+              <h4>Heavy Metal</h4>
+              <figcaption>Subtitle</figcaption>
+            </figure>
+          </div>
+          <!-- /Contenuto centrale -->
+
+        </div>
+        <!-- /Contenuto del main -->
+
+      </main>
+      <!-- Main -->
+
+      <!-- Footer -->
       <footer>
 
       </footer>
