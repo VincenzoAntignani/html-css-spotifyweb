@@ -8,6 +8,19 @@
   color: grey;
 }
 
+/* Scroll bar */
+::-webkit-scrollbar{
+  width: 5px;
+}
+::-webkit-scrollbar-thumb{
+  -webkit-border-radius: 5px;
+  background-color: lightgrey;
+}
+::-webkit-scrollbar-thumb:hover{
+  background-color: lightgreen;
+}
+/* /Scroll bar */
+
 /* Utility */
 .wrapper {
   width: 100%;
@@ -18,7 +31,14 @@
 .aside_active {
   border-left: 3px solid lightgreen;
 }
+.aside_active span,
+.aside_active i {
+  color: white;
+}
 
+.active a {
+  color: white;
+}
 .active::after {
   position: relative;
   left: 50%;
@@ -34,7 +54,6 @@
 .space_between {
   justify-content: space-between;
 }
-
 
 .circle_covers {
   border-radius: 100%;
@@ -63,7 +82,7 @@
   vertical-align: middle;
   border-radius: 5px;
 }
-.minutes_listened i {
+.scroll_minute .minutes_listened i {
   position: absolute;
   top: -5px;
   right: 0;
@@ -89,9 +108,11 @@ main {
 .no_style_list {
   list-style: none;
 }
+
 a {
   text-decoration: none;
 }
+/* /Utility */
 
 /* Sezione Aside di sx */
 main .aside_container {
@@ -232,7 +253,7 @@ main .main_content {
   right:0;
   z-index: 3;
   width: calc(100% - 250px);
-  padding-right: 25px;
+  padding-right: 50px;
   height: 100px;
   background: rgba(0, 0, 0, 0.5);
 }
