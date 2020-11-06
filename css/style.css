@@ -7,6 +7,9 @@
   font-weight: 700;
   color: grey;
 }
+/* footer i {
+  color: white;
+} */
 
 /* Utility */
 .wrapper {
@@ -19,11 +22,45 @@
   border-radius: 100%;
 }
 
+.scroll_minute {
+  position: relative;
+  display: inline-block;
+  height: 4px;
+  background: grey;
+  width: 50%;
+  vertical-align: middle;
+  border-radius: 5px;
+}
+.scroll_minute:hover {
+  cursor: pointer;
+}
+.scroll_minute .minutes_listened {
+  position:absolute;
+  top: 0;
+  left: 0;
+  width: 30%;
+  display: inline-block;
+  height: 4px;
+  background: lightgrey;
+  vertical-align: middle;
+  border-radius: 5px;
+}
+.minutes_listened i {
+  position: absolute;
+  top: -5px;
+  right: 0;
+  display: none;
+}
+.scroll_minute .minutes_listened:hover {
+  background: lightgreen;
+}
+.scroll_minute .minutes_listened:hover i {
+  display: block;
+}
 
 h1, h2, h3, h4, h5, h6 {
   color: white;
 }
-
 
 main {
   display: flex;
@@ -89,7 +126,6 @@ main .aside_container {
   cursor: pointer;
   border-left: 3px solid lightgreen;
 }
-
 
 /* Playlist */
 .aside_top .nav_playlist {
@@ -159,7 +195,8 @@ main .main_content {
   padding-top: 110px;
   width: calc(100% - 250px);
   height: 100%;
-  background: #252525;
+  background: rgba(0, 0, 10, 0.9);
+
   overflow-y: scroll;
 }
 
@@ -264,11 +301,7 @@ figure h4 {
   display: block;
 }
 
-
-
-
-
-
+/* Footer */
 footer {
   position: fixed;
   left: 0;
@@ -276,8 +309,128 @@ footer {
   z-index: 2;
   width: 100%;
   height: 90px;
-  background: blue;
+  background: #303030;
+  color: white;
 }
+footer .music_player_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+
+}
+.mp_left, .mp_right {
+  width: 250px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+/* mp left */
+.mp_left .played_song {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.mp_left .played_song img {
+  padding: 8px;
+  height: 100%;
+}
+li#title_album {
+  color: white;
+}
+.mp_left .played_song a:hover {
+  text-decoration: underline;
+  color: white;
+}
+.played_song ul li:last-child a {
+  font-size: 11px;
+}
+.cta_album i {
+  font-size: 18px;
+  padding: 0 3px;
+}
+.cta_album a:hover i {
+  color: white;
+}
+
+/* mp center */
+.mp_center i, .mp_center a {
+  color: white;
+}
+.mp_center {
+  text-align: center;
+  width: 50%;
+}
+
+.btn_player_container {
+  height: 100%;
+  margin: auto;
+}
+.btn_player_container .btn_player {
+  width: 100%;
+}
+.btn_player_container .btn_player ul {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+.btn_player ul li {
+  padding: 0 10px;
+  line-height: 40px;
+}
+.btn_player ul li i {
+  vertical-align: middle;
+  font-size: 20px;
+}
+.btn_player ul li:nth-child(3) i {
+  font-size: 35px;
+}
+.btn_player ul li:nth-child(3) i:hover {
+  transform: scale(1.2);
+}
+.btn_player ul li:nth-child(even) i {
+  font-size: 30px;
+}
+
+.mp_center .minute_bar {
+  margin-top: 5px;
+  height: 20px;
+  line-height: 20px;
+
+}
+.minute_bar span {
+  display: inline-block;
+  padding: 0 10px;
+  color: white;
+  font-size: 11px;
+}
+
+/* mp right */
+.mp_right li i{
+  color: white;
+}
+.mp_right ul {
+  display: flex;
+  width: 100%;
+}
+.mp_right ul li {
+  padding: 0 5px;
+}
+.mp_right ul li i {
+  font-size: 12px;
+}
+.mp_right ul li:last-child {
+  width: 100%;
+}
+#scroll_minute_right {
+  width: 80%;
+  min-width: 80px;
+}
+/* /Footer */
+
 
 /* MD */
 @media screen and (max-width: 1199px) {
@@ -316,11 +469,16 @@ footer {
     text-align: center;
   }
 
+
 }
 
 
 /* XS */
 @media screen and (max-width:768px) {
+
+  * {
+    font-size: 12px;
+  }
 
   /* Utility */
   .hidden_xs {
@@ -384,4 +542,5 @@ footer {
     width: 50%;
     text-align: center;
   }
+
 }
