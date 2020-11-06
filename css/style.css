@@ -7,9 +7,6 @@
   font-weight: 700;
   color: grey;
 }
-/* footer i {
-  color: white;
-} */
 
 /* Utility */
 .wrapper {
@@ -17,6 +14,27 @@
   height: 100vh;
   background: lightgrey;
 }
+
+.aside_active {
+  border-left: 3px solid lightgreen;
+}
+
+.active::after {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  content: "";
+  display: block;
+  height: 3px;
+  width: 20%;
+  margin-top: 5px;
+  background: lightgreen;
+}
+
+.space_between {
+  justify-content: space-between;
+}
+
 
 .circle_covers {
   border-radius: 100%;
@@ -112,6 +130,10 @@ main .aside_container {
 .aside_top .aside_nav li {
   padding: 3px 10px;
 }
+.aside_nav li:hover a span {
+  color: white;
+}
+
 .aside_top .aside_nav a {
   line-height: 30px;
 }
@@ -260,8 +282,8 @@ main .main_content {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  /* padding: 10px 20px; */
 }
+
 .cover_container figure {
   margin: 15px 0;
   padding-right: 20px;
@@ -347,6 +369,9 @@ li#title_album {
 }
 .played_song ul li:last-child a {
   font-size: 11px;
+}
+.cta_album {
+  text-align: right;
 }
 .cta_album i {
   font-size: 18px;
@@ -435,6 +460,13 @@ li#title_album {
 /* MD */
 @media screen and (max-width: 1199px) {
 
+  /* Sezione bonus */
+  /* Utility */
+  .hidden_md {
+    display: none;
+  }
+  /* /Sezione bonus */
+
   /* Contenuto centrale */
   .nav_menu ul {
     width: 90%;
@@ -455,6 +487,14 @@ li#title_album {
 /* SM */
 @media screen and (max-width:992px) {
 
+  /* Sezione bonus */
+  /* Utility */
+  .hidden_sm {
+    display: none;
+  }
+  /* /Sezione bonus */
+
+
   /* Contenuto centrale */
   .nav_menu ul {
     width: 90%;
@@ -466,9 +506,7 @@ li#title_album {
   .cover_container figure {
     padding: 0 10px;
     width: 50%;
-    text-align: center;
   }
-
 
 }
 
@@ -540,7 +578,16 @@ li#title_album {
   .cover_container figure {
     padding: 0 10px;
     width: 50%;
-    text-align: center;
+  }
+
+  /* Footer */
+  .mp_left, .mp_right {
+    width: 200px;
+    padding: 5px;
+  }
+
+  .played_song ul li:last-child a {
+    font-size: 10px;
   }
 
 }
