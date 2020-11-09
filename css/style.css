@@ -263,10 +263,10 @@ main .main_content {
   border: 1px solid white;
   color: white;
   text-transform: uppercase;
-  animation-name: nonso;
+  animation-name: zoomcta;
   animation-duration: 2s;
 }
-@keyframes nonso {
+@keyframes zoomcta {
   0% {
     transform: scale(0.5);
   }
@@ -300,8 +300,11 @@ main .main_content {
   cursor: pointer;
 }
 .nav_menu ul li:hover a {
-  transition: 2s;
+  transition: 0.5s;
   color: rgb(144, 238, 144);
+}
+.nav_menu ul li a:hover {
+  font-size: 16px;
 }
 
 .create_for, .recently_played,
@@ -321,19 +324,23 @@ main .main_content {
 
 .cover_container figure {
   margin: 15px 0;
-  padding-right: 20px;
+  padding-right: 28px;
   width: 16%;
   text-align: center;
 }
+
+
 .cover_container figure .cover_img {
   position: relative;
   width: 100%;
+  border-radius: 100%;
   animation-name: coveranim;
-  animation-duration: 1.5s;
+  animation-duration: 2s;
+  animation-timing-function: linear;
 }
 @keyframes coveranim {
   0% {
-    transform: rotate(180deg) scale(0.1);
+    transform: rotateX(360deg) rotatey(180deg) rotateZ(180deg) scale(0);
   }
 }
 
@@ -344,7 +351,8 @@ figure h4 {
 .cover_container .cover_img img {
   display: block;
   width: 100%;
-  transition-duration: 1s;
+  transition-duration: 2s;
+  border-radius: 100%;
 }
 .cover_container .cover_img i {
   position: absolute;
@@ -360,17 +368,16 @@ figure h4 {
   cursor: pointer;
   background: rgba(0, 0, 0, 0.5);
   opacity: 1;
-  border-radius: 100%;
 }
 .cover_container .cover_img:hover img {
   opacity: 0.5;
-  border-radius: 100%;
+  transform: rotate(360deg);
 }
 .cover_container .cover_img:hover i {
   opacity: 1;
 }
 .cover_container .cover_img i:hover {
-  color: lime;
+  color: rgb(144, 238, 144);
 }
 
 /* Footer */
