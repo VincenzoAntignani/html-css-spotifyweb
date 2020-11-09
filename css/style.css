@@ -88,10 +88,10 @@
   right: 0;
   display: none;
 }
-.scroll_minute .minutes_listened:hover {
+.scroll_minute:hover .minutes_listened {
   background: lightgreen;
 }
-.scroll_minute .minutes_listened:hover i {
+.scroll_minute:hover .minutes_listened i {
   display: block;
 }
 
@@ -239,7 +239,6 @@ main .main_content {
   width: calc(100% - 250px);
   height: 100%;
   background: rgba(0, 0, 10, 0.9);
-
   overflow-y: scroll;
 }
 
@@ -264,10 +263,20 @@ main .main_content {
   border: 1px solid white;
   color: white;
   text-transform: uppercase;
-  transition: 2s;
+  animation-name: nonso;
+  animation-duration: 2s;
 }
+@keyframes nonso {
+  0% {
+    transform: scale(0.5);
+  }
+}
+
 .cta_container .call_to_act:hover {
+  transition: 1s;
   cursor: pointer;
+  transform: scale(1.2);
+  background: rgba(144, 238, 144, 0.3);
 }
 
 /* Contenuto centrale */
@@ -287,9 +296,12 @@ main .main_content {
   width: 15%;
   text-align: center;
 }
-.nav_menu ul li a:hover {
-  color: white;
+.nav_menu ul li:hover {
+  cursor: pointer;
+}
+.nav_menu ul li:hover a {
   transition: 2s;
+  color: rgb(144, 238, 144);
 }
 
 .create_for, .recently_played,
@@ -316,7 +328,15 @@ main .main_content {
 .cover_container figure .cover_img {
   position: relative;
   width: 100%;
+  animation-name: coveranim;
+  animation-duration: 1.5s;
 }
+@keyframes coveranim {
+  0% {
+    transform: rotate(180deg) scale(0.1);
+  }
+}
+
 figure h4 {
   font-size: 16px;
   margin: 10px 0;
@@ -324,6 +344,7 @@ figure h4 {
 .cover_container .cover_img img {
   display: block;
   width: 100%;
+  transition-duration: 1s;
 }
 .cover_container .cover_img i {
   position: absolute;
@@ -332,18 +353,24 @@ figure h4 {
   transform: translate(-50%, -50%);
   font-size: 80px;
   color: white;
-  display: none;
+  opacity: 0;
+  transition: 1s;
 }
 .cover_container .cover_img:hover {
   cursor: pointer;
   background: rgba(0, 0, 0, 0.5);
   opacity: 1;
+  border-radius: 100%;
 }
 .cover_container .cover_img:hover img {
   opacity: 0.5;
+  border-radius: 100%;
 }
 .cover_container .cover_img:hover i {
-  display: block;
+  opacity: 1;
+}
+.cover_container .cover_img i:hover {
+  color: lime;
 }
 
 /* Footer */
@@ -356,13 +383,6 @@ footer {
   height: 90px;
   background: #303030;
   color: white;
-  animation-name: changebg;
-  animation-duration: 3s;
-  animation-direction: alternate-reverse;
-}
-@keyframes changebg {
-  from {background: #303030;}
-  to {background: #90EE90;}
 }
 
 footer .music_player_container {
@@ -445,7 +465,9 @@ li#title_album {
   font-size: 35px;
 }
 .btn_player ul li:nth-child(3) i:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
+  transition: 1s;
+  color: lime;
 }
 .btn_player ul li:nth-child(even) i {
   font-size: 30px;
