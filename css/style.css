@@ -257,16 +257,17 @@ main .main_content {
   height: 100px;
   background: rgba(0, 0, 0, 0.5);
 }
+
 .cta_container .call_to_act {
   padding: 10px 30px;
   border-radius: 50px;
   border: 1px solid white;
   color: white;
   text-transform: uppercase;
+  transition: 2s;
 }
 .cta_container .call_to_act:hover {
   cursor: pointer;
-  transform: scale(1.2);
 }
 
 /* Contenuto centrale */
@@ -288,6 +289,7 @@ main .main_content {
 }
 .nav_menu ul li a:hover {
   color: white;
+  transition: 2s;
 }
 
 .create_for, .recently_played,
@@ -354,7 +356,15 @@ footer {
   height: 90px;
   background: #303030;
   color: white;
+  animation-name: changebg;
+  animation-duration: 3s;
+  animation-direction: alternate-reverse;
 }
+@keyframes changebg {
+  from {background: #303030;}
+  to {background: #90EE90;}
+}
+
 footer .music_player_container {
   display: flex;
   justify-content: space-between;
